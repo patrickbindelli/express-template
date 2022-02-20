@@ -1,14 +1,6 @@
 const express = require('express');
 const app = express();
 
-const mongoose = require('mongoose');
-
-const connectionstring = 'mongodb+srv://patrickbindelli:FsIIf4m1JiLnGXtx@cluster0.hphbd.mongodb.net/meuBancoDeDados?retryWrites=true&w=majority'
-mongoose.connect(connectionstring)
-    .then(() => {
-        app.emit('pronto');
-    });
-
 const routes = require('./routes');
 const path = require('path');
 
